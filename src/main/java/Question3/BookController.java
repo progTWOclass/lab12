@@ -40,7 +40,7 @@ public class BookController {
         authorColumn.setCellValueFactory(new PropertyValueFactory<>("author"));
         isbnColumn.setCellValueFactory(new PropertyValueFactory<>("isbn"));
 
-        // Connect the table to the observable list
+        //link the observable list to the table view
         bookTable.setItems(bookList);
     }
 

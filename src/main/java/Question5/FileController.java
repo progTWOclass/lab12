@@ -8,7 +8,7 @@ import java.io.*;
 import java.io.IOException;
 
 public class FileController {
-    private Stage stage;  // Reference to the main stage
+    private Stage stage;  //Reference to the stage in fileApplication
 
     @FXML
     private TextArea noteText;
@@ -28,12 +28,12 @@ public class FileController {
 
         //get the user text and put it in a file to save
         String notes = noteText.getText().trim();
-        //return null when the user cancel the window
+        //return null when the user cancels the window
         if(savefile != null) {
             try (PrintWriter writer = new PrintWriter(new FileOutputStream(savefile))) {
                 writer.write(notes);
             } catch (IOException e) {
-                System.err.println("not saved something wrong with the file");
+                System.err.println("Not saved. There is something wrong with the file");
             }
         }
     }
